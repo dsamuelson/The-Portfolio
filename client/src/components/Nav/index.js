@@ -17,6 +17,7 @@ function Nav(props) {
             <h2>
                 <a href="/">David Samuelson</a>
             </h2>
+            <img src={require('../../assets/images/profile-pic.jpg')} className='profile-pic'/>
             <nav>
                 <ul className="nav-ul">
                     {categories.map((category) => (

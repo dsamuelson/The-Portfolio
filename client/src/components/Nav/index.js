@@ -1,8 +1,9 @@
 import React, {useEffect} from "react";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
-function Nav(props) {
+function Nav() {
     const dispatch = useDispatch();
     const categoryStore = useSelector(state => state.categories);
     const currentCategory = categoryStore.currentCategory
@@ -24,6 +25,7 @@ function Nav(props) {
                         <li
                         className={`nav-li ${category.name === currentCategory.name && 'nav-active'}`}
                         key={category.name}>
+                            <Link to={`/${category.name}`}>
                             <span onClick={() => {
                                 dispatch({
                                     type: "CURRENT_CATEGORY",
@@ -33,6 +35,7 @@ function Nav(props) {
                             title={category.description}>
                             {category.name}
                             </span>
+                            </Link>
                         </li>
                     ))}
                 </ul>

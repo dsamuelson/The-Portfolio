@@ -13,6 +13,7 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import ContactForm from './components/Contact';
+import Resume from './components/Resume';
 
 
 const httpLink = createHttpLink({
@@ -52,6 +53,10 @@ function App() {
             <Route
             path='/contact'
             element={<ContactForm />}
+            />
+            <Route
+            path='/resume'
+            element={<Resume />}
             />
             <Route
             path='*'

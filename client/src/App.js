@@ -12,6 +12,7 @@ import { setContext } from '@apollo/client/link/context';
 import Nav from './components/Nav';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
+import ContactForm from './components/Contact';
 
 
 const httpLink = createHttpLink({
@@ -47,6 +48,10 @@ function App() {
             <Route
             path='/portfolio'
             element={<Portfolio />}
+            />
+            <Route
+            path='/contact'
+            element={<ContactForm />}
             />
             <Route
             path='*'

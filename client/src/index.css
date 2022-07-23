@@ -350,7 +350,7 @@ textarea {
     width: 90%;
   }
 
-  .app-cont {
-    justify-content: flex-start;
+  .about-cont {
+    justify-content: flex-start!important;
   }
 }

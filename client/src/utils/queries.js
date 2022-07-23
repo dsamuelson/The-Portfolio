@@ -13,3 +13,14 @@ export const QUERY_PROJECTS = gql`
     }
   }
 `;
+
+export const QUERY_RESPONSES = gql`
+  query allResponses {
+    allResponses {
+      _id
+      name
+      email
+      message
+    }
+  }
+`;

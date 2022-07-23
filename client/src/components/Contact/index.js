@@ -1,10 +1,14 @@
 import React, {useState} from "react";
 import { validateEmail } from '../../utils/helpers';
+import { useMutation } from '@apollo/client'
+import {ADD_RESPONSE} from '../../utils/mutations'
 
 function ContactForm() {
     const [errorMessage, setErrorMessage] = useState('');
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
     const { name, email, message } = formState;
+
+    const [addResponse] = useMutation(ADD_RESPONSE);
 
     function handleChange(e) {
         if (e.target.name === 'email') {
@@ -29,9 +33,19 @@ function ContactForm() {
         
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        console.log(formState);
+        console.log (e.target.name.value)
+        const mutationResponse = await addResponse({
+            variables: {
+                name: e.target.name.value || formState.name,
+                email: e.target.email.value || formState.email,
+                message: e.target.message.value || formState.message
+            }
+        })
+        
+        setFormState({name: '', email: '', message: ''});
+
         
       }
 

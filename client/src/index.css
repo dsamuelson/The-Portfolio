@@ -10,7 +10,7 @@ body {
   background-color: aliceblue;
 }
 
-.projects-cont::-webkit-scrollbar .about-cont::-webkit-scrollbar {
+.projects-cont::-webkit-scrollbar, .about-cont::-webkit-scrollbar {
   display: none;
 }
 
@@ -348,5 +348,9 @@ textarea {
   }  
   .portfolio-link {
     width: 90%;
+  }
+
+  .app-cont {
+    justify-content: flex-start;
   }
 }

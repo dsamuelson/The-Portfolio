@@ -10,7 +10,7 @@ body {
   background-color: aliceblue;
 }
 
-.projects-cont::-webkit-scrollbar {
+.projects-cont::-webkit-scrollbar .about-cont::-webkit-scrollbar {
   display: none;
 }
 
@@ -121,6 +121,7 @@ footer a {
   height: 75%;
   align-self: center;
   background-color: lightblue;
+  overflow: scroll;
 }
 
 .about-cont h2 {

@@ -6,26 +6,23 @@ function Resume() {
 
             <h2> Proficiencies </h2>
             <h3>Front End</h3>
-            <p>
-                - Html 5 <br/>
-                - CSS <br/>
-                - Javascript <br/>
-                - React <br/>
-                <br/>
-                <br/>
-            </p>
+            <ul>
+                <li>HTML5, CSS, Javascript</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Apollo Server</li>
+                <li>Stripe</li>
+            </ul>
             <h3>Backend</h3>
-            <p>
-                - Node.js <br/>
-                - Handlebars <br/>
-                - GraphQL <br/>
-                - MERN Stack <br/>
-                - SQL <br/>
-                - MongoDB <br/>
-                - Express.js <br/>
-                <br/>
-                <br/>
-            </p>
+            <ul>
+                <li>Node.js</li>
+                <li>Handlebars</li>
+                <li>SQL</li>
+                <li>MongoDB</li>
+                <li>Express.js</li>
+                <li>MERN Stack in general</li>
+                <li>GraphQL</li>
+            </ul>
             <a href={require("../../assets/pdf/resume.pdf")} download>Click to Download Resume</a>
         </section>
     )

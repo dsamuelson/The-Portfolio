@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
@@ -14,6 +13,7 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import ContactForm from './components/Contact';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 
 const httpLink = createHttpLink({
@@ -39,7 +39,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        <div className='app-cont'>
           <Nav />
           <Routes>
             <Route
@@ -63,6 +63,7 @@ function App() {
             element={<About />}
             />
           </Routes>
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>

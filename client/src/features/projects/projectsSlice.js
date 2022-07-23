@@ -4,8 +4,7 @@ import {
 } from '../../utils/actions'
 
 const initialState = {
-    projects: [],
-    ignoredProjects: []
+    projects: []
 };
 
 export default function projectsReducer(state = initialState, action) {
@@ -14,11 +13,6 @@ export default function projectsReducer(state = initialState, action) {
             return {
                 ...state,
                 projects: [...action.projects]
-            }
-        case REMOVE_PROJECT:
-            return {
-                ...state,
-                ignoredProjects: [...action.ignoredProjects]
             }
         default:
             return state;

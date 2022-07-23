@@ -4,8 +4,8 @@ import {
 } from '../../utils/actions'
 
 const initialState = {
-    categories: [{name: 'About', description: 'All about Me'}, {name: 'Portfolio', description: 'My work and projects'}, {name: 'Contact', description: 'Reach out to me'}, {name: 'Resume', description: 'My Resume and Qualifications'}],
-    currentCategory: {name: 'About', description: 'All about Me'}
+    categories: [{name: 'About', description: 'All about Me'}, {name: 'Portfolio', description: 'My work and projects'}, {name: 'Contact', description: 'Reach out to me'}, {name: 'Resume', description: 'My Resumé and Qualifications'}],
+    currentCategory: {name: '', description: ''}
 }
 
 export function categoriesReducer(state = initialState, action) {

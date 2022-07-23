@@ -15,10 +15,12 @@ function Nav() {
 
     return (
         <header>
+            <div className="header-div">
             <h2>
                 <a href="/">David Samuelson</a>
             </h2>
             <img src={require('../../assets/images/profile-pic.jpg')} className='profile-pic'/>
+            </div>
             <nav>
                 <ul className="nav-ul">
                     {categories.map((category) => (

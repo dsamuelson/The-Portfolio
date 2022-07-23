@@ -3,6 +3,7 @@ import { validateEmail } from '../../utils/helpers';
 import { useMutation } from '@apollo/client'
 import {ADD_RESPONSE} from '../../utils/mutations'
 
+
 function ContactForm() {
     const [errorMessage, setErrorMessage] = useState('');
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
@@ -35,7 +36,7 @@ function ContactForm() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        console.log (e.target.name.value)
+
         const mutationResponse = await addResponse({
             variables: {
                 name: e.target.name.value || formState.name,
@@ -43,10 +44,8 @@ function ContactForm() {
                 message: e.target.message.value || formState.message
             }
         })
-        
-        setFormState({name: '', email: '', message: ''});
-
-        
+        setErrorMessage("Successfully submitted. Please allow some time for a response and be sure to check your SPAM folder.")
+      
       }
 
     return (

@@ -21,7 +21,7 @@ const resolvers = {
                 secure: true, // true for 465, false for other ports
                 auth: {
                 user: 'dsamuelson89@gmail.com',
-                pass: 'kpikfngwxvnbbfbm',
+                pass: process.env.APPASW,
                 },
             });
 

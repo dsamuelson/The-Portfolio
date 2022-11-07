@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: aliceblue;
+  background-color: white;
 }
 
 .projects-cont::-webkit-scrollbar, .about-cont::-webkit-scrollbar {
@@ -22,7 +22,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: system-ui, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -46,16 +46,17 @@ code {
 }
 
 header {
-  background-image: url(./assets/images/Diamond-pic.jpg);
+  background-image: linear-gradient(105deg, white, lightblue 50%, skyblue);
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .nav-active a {
@@ -69,7 +70,6 @@ header h2 {
   font-weight: bold;
   padding-left: 10px;
   padding-right: 25px;
-  background-color: gray;
   border-radius: 5px;
 }
 
@@ -80,7 +80,9 @@ header h2 {
   align-items: center;
   list-style: none;
   font-weight: bolder;
-  background-color: gray;
+  border-top: 1px solid skyblue;
+  border-bottom: 1px solid skyblue;
+  background-color: lightblue;
   margin-bottom: 0;
 }
 
@@ -94,7 +96,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./assets/images/Diamond-pic.jpg);
+  background-image: linear-gradient(25deg, skyblue, lightblue 50%, white);
   flex-shrink: 0;
 }
 
@@ -114,13 +116,16 @@ footer a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 30px;
+  background-color: white;
 }
 
 .about-cont {
   width: 75%;
   height: 75%;
   align-self: center;
-  background-color: lightblue;
+  border: 1px solid blue;
+  box-shadow: 16px 10px 15px 0px lightblue;
   overflow: scroll;
 }
 
@@ -145,8 +150,9 @@ footer a {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  background-color: lightblue;
   border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 16px 10px 15px 0px lightblue;
 }
 
 .resume-cont h2 {
@@ -175,11 +181,13 @@ footer a {
   flex-direction: column;
   color: black;
   align-items: center;
-  background-color: lightblue;
+  border: 1px solid blue;
   border-radius: 10px;
   height: 75%;
   width: 75%;
   align-self: center;
+  box-shadow: 16px 10px 15px 0px lightblue;
+  background-color: white;
 }
 
 .form-cont h2 {
@@ -339,6 +347,14 @@ textarea {
 
 .portfolio-link:hover .git-hub-link {
   opacity: 1;
+}
+
+.dlResume {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
 }
 
 @media screen and (max-width: 900px) {
